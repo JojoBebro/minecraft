@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.creatures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.creature {
+    margin: 10px;
+    width: 150px;
+}
+
+.creature img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.creature p {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
