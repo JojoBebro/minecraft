@@ -1,0 +1,247 @@
+@font-face {
+    font-family: 'Minecraft';
+    src: url('/fonts/MinecraftRegular-Bmg3.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  :root {
+      /* Define fire-themed colors */
+      --background: hsl(0, 0%, 15%); /* Dark background for contrast */
+      --foreground: hsl(0, 0%, 95%);
+      --card-background: hsl(0, 0%, 25%);
+      --card-foreground: hsl(0, 0%, 95%);
+  
+      --primary: hsl(15, 80%, 50%); /* Orange */
+      --primary-foreground: hsl(0, 0%, 98%);
+  
+      --secondary: hsl(35, 90%, 55%); /* Brighter Orange/Yellow */
+      --secondary-foreground: hsl(0, 0%, 9%);
+  
+      --muted: hsl(0, 0%, 30%);
+      --muted-foreground: hsl(0, 0%, 60%);
+  
+      --accent: hsl(45, 100%, 50%); /* Yellow */
+      --accent-foreground: hsl(0, 0%, 9%);
+  
+      --destructive: hsl(0, 70%, 50%); /* Red */
+      --destructive-foreground: hsl(0, 0%, 98%);
+  
+      --border: hsl(0, 0%, 40%);
+      --radius: 0.5rem;
+  }
+  
+  /* Basic Reset */
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  
+  body {
+      font-family: 'Minecraft', sans-serif;
+      background-color: var(--background);
+      color: var(--foreground);
+      line-height: 1.6;
+      padding: 20px;
+  }
+  
+  .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px;
+  }
+  
+  h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: var(--primary);
+  }
+  
+  h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: var(--secondary); /* Use secondary for Animals */
+  }
+  
+  #monsters h2 {
+      color: var(--destructive); /* Use destructive for Monsters */
+  }
+  
+  .section-divider {
+      border: none;
+      height: 2px;
+      background-color: var(--border);
+      margin: 40px 0;
+  }
+  
+  /* Grid Layout */
+  .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsive grid */
+      gap: 20px;
+  }
+  
+  /* Card Styling */
+  .card-link {
+      text-decoration: none;
+      color: inherit;
+      display: block; /* Make the link take up the card space */
+  }
+  
+  .card {
+      background-color: var(--card-background);
+      color: var(--card-foreground);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Slightly darker shadow for dark theme */
+      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+      height: 100%; /* Make cards in a row equal height */
+      display: flex;
+      flex-direction: column;
+      text-align: center; /* Center card content */
+  }
+  
+  .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  }
+  
+  .card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: var(--primary);
+  }
+  
+  .card img {
+      display: block; /* Ensure image is treated as a block element */
+      width: 100%; /* Make image responsive within the card */
+      max-width: 150px; /* Control maximum image size */
+      height: 150px; /* Set a fixed height for consistency */
+      aspect-ratio: 1 / 1; /* Maintain square aspect ratio */
+      object-fit: contain; /* Fit image within bounds without distortion */
+      border-radius: calc(var(--radius) - 4px);
+      margin: 0 auto 10px auto; /* Center image horizontally */
+      background-color: var(--muted); /* Use muted background for images */
+      padding: 5px; /* Small padding around image */
+      border: 1px solid var(--border);
+  }
+  
+  .card p {
+      font-size: 0.9rem;
+      color: var(--muted-foreground);
+      margin-bottom: 0; /* Remove bottom margin */
+      flex-grow: 1;
+  }
+  
+  /* Animation */
+  .animate-block {
+    /* Add specific block-like hover animation if needed,
+       otherwise the card hover is sufficient */
+  }
+  
+  /* Detail Page Specific Styles */
+  .detail-page {
+      max-width: 800px; /* Narrower container for detail pages */
+      text-align: center;
+  }
+  
+  .detail-page h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+  }
+  
+  .detail-image {
+      display: block; /* Ensure image is treated as a block element */
+      max-width: 250px; /* Control maximum image size on detail page */
+      width: 100%; /* Allow image to shrink on smaller screens */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: var(--radius);
+      margin: 0 auto 20px auto; /* Center image horizontally */
+      background-color: var(--muted);
+      padding: 10px;
+      border: 1px solid var(--border);
+  }
+  
+  .detail-page p {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      text-align: left;
+      line-height: 1.7;
+  }
+  
+  .back-link {
+      display: inline-block;
+      margin-bottom: 30px;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 1rem;
+  }
+  
+  .back-link:hover {
+      text-decoration: underline;
+  }
+  
+  .wiki-link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 8px 16px;
+      background-color: var(--accent);
+      color: var(--accent-foreground);
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+  }
+  
+  .wiki-link:hover {
+      background-color: hsl(45, 100%, 45%); /* Darker yellow on hover */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+      h1 {
+          font-size: 2rem;
+      }
+      h2 {
+          font-size: 1.5rem;
+      }
+      .grid {
+          grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      }
+      .card {
+          padding: 10px;
+      }
+      .card h3 {
+          font-size: 1.2rem;
+      }
+      .card img {
+          max-width: 120px; /* Adjust card image size for smaller screens */
+          height: 120px;
+      }
+      .detail-page h1 {
+          font-size: 2.2rem;
+      }
+      .detail-image {
+          max-width: 200px;
+      }
+      .detail-page p {
+          font-size: 1rem;
+      }
+  }
+  
+  @media (max-width: 480px) {
+      .grid {
+          grid-template-columns: 1fr; /* Single column on very small screens */
+      }
+      .card img {
+          max-width: 100px; /* Further adjust card image size */
+          height: 100px;
+      }
+      .detail-page h1 {
+          font-size: 1.8rem;
+      }
+  }
+  

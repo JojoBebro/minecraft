@@ -3,20 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Створіння Minecraft</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Компендіум Minecraft</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Список створінь Minecraft</h1>
-    <div class="creatures">
-        <div class="creature">
-            <a href="https://minecraft.fandom.com/wiki/Creeper" target="_blank">
-                <img src="images/creeper.png" alt="Кріпер">
-                <p>Кріпер</p>
-            </a>
-        </div>
-        <!-- Додайте інші створіння за аналогією -->
+    <div class="container">
+        <h1>Монстри Minecraft</h1>
+
+        <section id="animals">
+            <h2>Монстри Незеру</h2>
+            <div class="grid">
+                <!-- Картки тварин -->
+                <a href="chicken.html" class="card-link">
+                    <div class="card animate-block">
+                        <h3>Візер</h3>
+                        <img src="https://i.pinimg.com/736x/d4/03/fc/d403fc4e853e8893ebfd3f8799982404.jpg" alt="Візер">
+                        <p>Візери ворожі до гравця і до всіх мобів, за винятком нежиті</p>
+                    </div>
+                </a>
+                <a href="cow.html" class="card-link">                
+                    <div class="card animate-block">
+                        <h3>Синозомбований Піглін</h3>
+                        <img src="https://ru.minecraft.wiki/images/thumb/%D0%97%D0%BE%D0%BC%D0%B1%D0%B8%D1%84%D0%B8%D1%86%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9_%D0%BF%D0%B8%D0%B3%D0%BB%D0%B8%D0%BD_JE8.png/160px-%D0%97%D0%BE%D0%BC%D0%B1%D0%B8%D1%84%D0%B8%D1%86%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9_%D0%BF%D0%B8%D0%B3%D0%BB%D0%B8%D0%BD_JE8.png?57028" alt="Синозомбований піґлін">
+                        <p>Зомбований піґлін спавниться з золотим мечем, який може мати випадкові чари.</p>
+                    </div>
+                </a>
+                <a href="pig.html" class="card-link">
+                    <div class="card animate-block">
+                        <h3>Ґаст</h3>
+                        <img src="https://minecraft.wiki/images/thumb/Ghast_JE2_BE2.gif/220px-Ghast_JE2_BE2.gif?b2699" alt="Ґаст">
+                        <p>Величезний білий літаючий ворожий моб.</p>
+                    </div>
+                </a>
+                <!-- Додайте більше карток тварин з посиланнями на їхні сторінки -->
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section id="monsters">
+            <h2>Монстри Землі</h2>
+            <div class="grid">
+                <!-- Картки монстрів -->
+                 <a href="zombie.html" class="card-link">
+                    <div class="card animate-block">
+                        <h3>Зомбі</h3>
+                        <img src="https://minecraft.wiki/images/thumb/Zombie_JE3_BE2.png/150px-Zombie_JE3_BE2.png?228b5" alt="Зомбі">
+                        <p>Звичайний нежить-монстр.</p>
+                    </div>
+                </a>
+                 <a href="skeleton.html" class="card-link">
+                    <div class="card animate-block">
+                       <h3>Скелет</h3>
+                       <img src="https://minecraft.wiki/images/thumb/Skeleton_JE6_BE4.png/150px-Skeleton_JE6_BE4.png?85786" alt="Скелет">
+                       <p>Нежить-лучник.</p>
+                    </div>
+                </a>
+                 <a href="creeper.html" class="card-link">
+                    <div class="card animate-block">
+                        <h3>Кріпер</h3>
+                        <img src="https://upload.wikimedia.org/wikipedia/ru/4/49/Creeper_%28Minecraft%29.png" alt="Кріпер">
+                        <p>Тиха, вибухова загроза.</p>
+                    </div>
+                </a>
+                <!-- Додайте більше карток монстрів з посиланнями на їхні сторінки -->
+            </div>
+        </section>
     </div>
 </body>
 </html>
-

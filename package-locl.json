@@ -1,0 +1,13 @@
+{
+    "name": "minecraft-compendium-static",
+    "version": "0.1.0",
+    "lockfileVersion": 3,
+    "requires": true,
+    "packages": {
+      "": {
+        "name": "minecraft-compendium-static",
+        "version": "0.1.0"
+      }
+    }
+  }
+  
